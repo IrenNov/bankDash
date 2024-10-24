@@ -1,8 +1,7 @@
 .aside {
 
-    width: max(17.36vw, 250px);
+    width: clamp(190px, 17.36vw, 250px);
     overflow: visible;
-    margin-top: -100px;
     background-color: var(--color-white);
     border-right: 1px solid #E6EFF5;
     height: 100vh;
@@ -10,17 +9,20 @@
 
     &__logo {
         max-height: 100px;
-        padding-block: 32px;
-        padding-left: 44px;
+        padding-block: 32px 2.22vw;
+        padding-inline: 3.06vw 1.53vw;
     }
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
-
+    //gap: 30px;
+    &__list {
+        overflow-y: auto;
+        padding-block: 2.08vw 24.79vw;
+    }
     &__item:not(:last-child) {
 
-        padding-bottom: 3.8vh;
+        padding-bottom: 39px;
     }
 
     &__link {
@@ -29,6 +31,7 @@
         font-family: var(--font-family-medium);
         display: flex;
         padding-left: 3.06vw;
+        padding-right: 2.08vw;
         gap: 1.81vw;
         align-items: center;
         position: relative;

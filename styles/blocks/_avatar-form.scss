@@ -3,6 +3,7 @@
     position: relative;
     display: inline-block;
     width: min(9.03vw, 130px);
+    aspect-ratio: 1;
 
     &__input {
         display: none;

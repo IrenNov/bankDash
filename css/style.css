@@ -435,9 +435,8 @@ hr {
 }
 
 .header {
-  padding-block: 20px 20px;
+  padding-block: 1.39vw;
   background-color: var(--color-white);
-  margin-left: max(17.36vw, 250px);
   border-bottom: 1px solid #E6EFF5;
 }
 .header .header-avatar-image {
@@ -468,24 +467,26 @@ hr {
 }
 
 .aside {
-  width: max(17.36vw, 250px);
+  width: clamp(190px, 17.36vw, 250px);
   overflow: visible;
-  margin-top: -100px;
   background-color: var(--color-white);
   border-right: 1px solid #E6EFF5;
   height: 100vh;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 .aside__logo {
   max-height: 100px;
-  padding-block: 32px;
-  padding-left: 44px;
+  padding-block: 32px 2.22vw;
+  padding-inline: 3.06vw 1.53vw;
+}
+.aside__list {
+  overflow-y: auto;
+  padding-block: 2.08vw 24.79vw;
 }
 .aside__item:not(:last-child) {
-  padding-bottom: 3.8vh;
+  padding-bottom: 39px;
 }
 .aside__link {
   font-size: clamp(15px, 1.25vw, 18px);
@@ -493,6 +494,7 @@ hr {
   font-family: var(--font-family-medium);
   display: flex;
   padding-left: 3.06vw;
+  padding-right: 2.08vw;
   gap: 1.81vw;
   align-items: center;
   position: relative;
@@ -528,6 +530,7 @@ hr {
   position: relative;
   display: inline-block;
   width: min(9.03vw, 130px);
+  aspect-ratio: 1;
 }
 .avatar-form__input {
   display: none;
@@ -557,9 +560,12 @@ hr {
 
 .search {
   width: 17.7vw;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: overflow 0.3s ease;
+}
+.search__input:focus-within {
+  overflow: hidden;
 }
 .search__input {
   width: 17.7vw;

@@ -11,35 +11,9 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__inner container">
-            <h2 class="header__title">Setting</h2>
-
-            <div class="header__menu">
-                <form role="search" method="get" action="/search" class="header__search-form search hidden-mobile">
-                    <input class="search__input" type="search" name="search-text" placeholder="Search for something"
-                        aria-label="Search" required>
-                </form>
-                <button class="header__button button hidden-mobile" type="button">
-                    <img class="button__icon" src="./image/settings-icon.svg" alt="settings">
-                </button>
-                <button class="header__button button hidden-mobile" type="button">
-                    <img class="button__icon" src="./image/notification-icon.svg" alt="settings">
-                </button>
-
-                <div class="header__avatar">
-                    <img src="./image/avatar-photo.png" alt="Avatar" class="header-avatar-image" />
-                </div>
-                <button class="header__burger-button burger-button visible-mobile" type="button"
-                    onclick="mobileOverlay.showModal()">
-                    <span class="visually-hidden">Open navigation menu</span>
-                </button>
-            </div>
-
-        </div>
-    </header>
 
     <main class="main">
+
         <aside class="aside">
             <h2 class="visually-hidden">Menu</h2>
             <a class="aside__logo logo" href="/">
@@ -259,153 +233,185 @@
             </ul>
         </aside>
 
+        <div class="content">
+            <header class="header">
+                <div class="header__inner container">
+                    <h2 class="header__title">Setting</h2>
 
-        <div class="card">
-
-            <section class="card__container setting-card" id="Setting">
-                <div class="card__wrapper">
-                    <h2 class="visually-hidden">Accaunt-settings</h2>
-                    <div class="setting-card__header">
-                        <ul class="setting-card__list">
-                            <li class="setting-card__item">
-                                <a class="setting-card__link setting-card__link--active" href="#EditProfile">Edit Profile</a>
-                            </li>
-                            <li class="setting-card__item">
-                                <a class="setting-card__link" href="#Preferences">Preferences</a>
-                            </li>
-                            <li class="setting-card__item">
-                                <a class="setting-card__link" href="#Security">Security</a>
-                            </li>
-                        </ul>
-                        <hr>
-                    </div>
-
-                    <div class="setting-card__form " id="EditProfile">
-                        <div class="setting-card__avatar avatar-form">
-                            <input class="avatar-form__input" type="file" id="upload-avatar" accept="image/*" />
-                            <label for="upload-avatar" class="avatar-form__label">
-                                <img src="./image/avatar-photo.png" alt="Avatar" class="avatar-image" />
-                            </label>
-                            <button class="avatar-form__button"
-                                onclick="document.getElementById('upload-avatar').click();">
-                                <img src="./image/avatar-form__button.svg" alt="avatar">
-                            </button>
-                        </div>
-                        <form class="form" action="#" method="POST">
-                            <div class="form__body">
-                                <div class="form__group group">
-                                    <label class="group__label" for="name">Your Name</label>
-                                    <input class="group__input" type="text" id="name" name="name"
-                                        placeholder="Charlene Reed" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="username">User Name</label>
-                                    <input class="group__input" id="username" name="username"
-                                        placeholder="Charlene Reed " required>
-                                </div>
-                                <div class="form__group group">
-                                    <label class="group__label" for="email">Email</label>
-                                    <input class="group__input" type="email" id="email" name="email"
-                                        placeholder="charlenereed@gmail.com" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="password">Password</label>
-                                    <input class="group__input" id="password" name="password" placeholder="**********"
-                                        required>
-                                </div>
-                                <div class="form__group group">
-                                    <label class="group__label" for="dateofbirth">Date of Birth</label>
-                                    <input class="group__input" id="dateofbirth" name="dateofbirth"
-                                        placeholder="25 January 1990" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="presentaddress">Present Address</label>
-                                    <input class="group__input" id="presentaddress" name="presentaddress"
-                                        placeholder="San Jose, California, USA" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="permanentaddress">Permanent Address</label>
-                                    <input class="group__input" id="permanentaddress" name="permanentaddress"
-                                        placeholder="San Jose, California, USA" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="city">City</label>
-                                    <input class="group__input" id="city" name="city" placeholder="San Jose" required>
-                                </div>
-                                <div class="form__group  group">
-                                    <label class="group__label" for="postalcode">Postal Code</label>
-                                    <input class="group__input" id="postalcode" name="postalcode"
-                                        placeholder="45962" required>
-                                </div>
-                                
-                                <div class="form__group  group">
-                                    <label class="group__label" for="country">Country</label>
-                                    <input class="group__input" id="country" name="country" placeholder="USA" required>
-                                </div>
-                            </div>
-                        <button class="form__button button--accent" type="submit">Save</button>
+                    <div class="header__menu">
+                        <form role="search" method="get" action="/search"
+                            class="header__search-form search hidden-mobile">
+                            <input class="search__input" type="search" name="search-text"
+                                placeholder="Search for something" aria-label="Search" required>
                         </form>
+                        <button class="header__button button hidden-mobile" type="button">
+                            <img class="button__icon" src="./image/settings-icon.svg" alt="settings">
+                        </button>
+                        <button class="header__button button hidden-mobile" type="button">
+                            <img class="button__icon" src="./image/notification-icon.svg" alt="settings">
+                        </button>
 
+                        <div class="header__avatar">
+                            <img src="./image/avatar-photo.png" alt="Avatar" class="header-avatar-image" />
+                        </div>
+                        <button class="header__burger-button burger-button visible-mobile" type="button"
+                            onclick="mobileOverlay.showModal()">
+                            <span class="visually-hidden">Open navigation menu</span>
+                        </button>
                     </div>
 
-                    <div class="setting-card__form" id="Preferences">
+                </div>
+            </header>
+
+            <div class="card">
+
+                <section class="card__container setting-card" id="Setting">
+                    <div class="card__wrapper">
+                        <h2 class="visually-hidden">Accaunt-settings</h2>
+                        <div class="setting-card__header">
+                            <ul class="setting-card__list">
+                                <li class="setting-card__item">
+                                    <a class="setting-card__link setting-card__link--active" href="#EditProfile">Edit
+                                        Profile</a>
+                                </li>
+                                <li class="setting-card__item">
+                                    <a class="setting-card__link" href="#Preferences">Preferences</a>
+                                </li>
+                                <li class="setting-card__item">
+                                    <a class="setting-card__link" href="#Security">Security</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+
+                        <div class="setting-card__form " id="EditProfile">
+                            <div class="setting-card__avatar avatar-form">
+                                <input class="avatar-form__input" type="file" id="upload-avatar" accept="image/*" />
+                                <label for="upload-avatar" class="avatar-form__label">
+                                    <img src="./image/avatar-photo.png" alt="Avatar" class="avatar-image" />
+                                </label>
+                                <button class="avatar-form__button"
+                                    onclick="document.getElementById('upload-avatar').click();">
+                                    <img src="./image/avatar-form__button.svg" alt="avatar">
+                                </button>
+                            </div>
+                            <form class="form" action="#" method="POST">
+                                <div class="form__body">
+                                    <div class="form__group group">
+                                        <label class="group__label" for="name">Your Name</label>
+                                        <input class="group__input" type="text" id="name" name="name"
+                                            placeholder="Charlene Reed" required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="username">User Name</label>
+                                        <input class="group__input" id="username" name="username"
+                                            placeholder="Charlene Reed " required>
+                                    </div>
+                                    <div class="form__group group">
+                                        <label class="group__label" for="email">Email</label>
+                                        <input class="group__input" type="email" id="email" name="email"
+                                            placeholder="charlenereed@gmail.com" required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="password">Password</label>
+                                        <input class="group__input" id="password" name="password"
+                                            placeholder="**********" required>
+                                    </div>
+                                    <div class="form__group group">
+                                        <label class="group__label" for="dateofbirth">Date of Birth</label>
+                                        <input class="group__input" id="dateofbirth" name="dateofbirth"
+                                            placeholder="25 January 1990" required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="presentaddress">Present Address</label>
+                                        <input class="group__input" id="presentaddress" name="presentaddress"
+                                            placeholder="San Jose, California, USA" required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="permanentaddress">Permanent Address</label>
+                                        <input class="group__input" id="permanentaddress" name="permanentaddress"
+                                            placeholder="San Jose, California, USA" required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="city">City</label>
+                                        <input class="group__input" id="city" name="city" placeholder="San Jose"
+                                            required>
+                                    </div>
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="postalcode">Postal Code</label>
+                                        <input class="group__input" id="postalcode" name="postalcode"
+                                            placeholder="45962" required>
+                                    </div>
+
+                                    <div class="form__group  group">
+                                        <label class="group__label" for="country">Country</label>
+                                        <input class="group__input" id="country" name="country" placeholder="USA"
+                                            required>
+                                    </div>
+                                </div>
+                                <button class="form__button button--accent" type="submit">Save</button>
+                            </form>
+
+                        </div>
+
+                        <div class="setting-card__form" id="Preferences">
+                        </div>
+
+                        <div class="setting-card__form" id="Security">
+                        </div>
+
                     </div>
+                </section>
 
-                    <div class="setting-card__form" id="Security">
+                <section class="card__container" id="MyPrivileges">
+                    <div class="card__wrapper">
+                        <h2>MyPrivileges</h2>
                     </div>
+                </section>
 
-                </div>
-            </section>
+                <section class="card__container" id="Services">
+                    <div class="card__wrapper">
+                        <h2>Services</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="MyPrivileges">
-                <div class="card__wrapper">
-                    <h2>MyPrivileges</h2>
-                </div>
-            </section>
+                <section class="card__container" id="Loans">
+                    <div class="card__wrapper">
+                        <h2>Loans</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="Services">
-                <div class="card__wrapper">
-                    <h2>Services</h2>
-                </div>
-            </section>
+                <section class="card__container" id="CreditCards">
+                    <div class="card__wrapper">
+                        <h2>CreditCards</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="Loans">
-                <div class="card__wrapper">
-                    <h2>Loans</h2>
-                </div>
-            </section>
+                <section class="card__container" id="Investments">
+                    <div class="card__wrapper">
+                        <h2>Investments</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="CreditCards">
-                <div class="card__wrapper">
-                    <h2>CreditCards</h2>
-                </div>
-            </section>
+                <section class="card__container" id="Accounts">
+                    <div class="card__wrapper">
+                        <h2>Accounts</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="Investments">
-                <div class="card__wrapper">
-                    <h2>Investments</h2>
-                </div>
-            </section>
+                <section class="card__container" id="Transactions">
+                    <div class="card__wrapper">
+                        <h2>Transactions</h2>
+                    </div>
+                </section>
 
-            <section class="card__container" id="Accounts">
-                <div class="card__wrapper">
-                    <h2>Accounts</h2>
-                </div>
-            </section>
-
-            <section class="card__container" id="Transactions">
-                <div class="card__wrapper">
-                    <h2>Transactions</h2>
-                </div>
-            </section>
-
-            <section class="card__container" id="Dashboard">
-                <div class="card__wrapper">
-                    <h2>Dashboard</h2>
-                </div>
-            </section>
+                <section class="card__container" id="Dashboard">
+                    <div class="card__wrapper">
+                        <h2>Dashboard</h2>
+                    </div>
+                </section>
+            </div>
         </div>
-
 
     </main>
 
