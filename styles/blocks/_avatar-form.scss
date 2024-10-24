@@ -2,7 +2,7 @@
 
     position: relative;
     display: inline-block;
-    width: 130px;
+    width: min(9.03vw, 130px);
 
     &__input {
         display: none;

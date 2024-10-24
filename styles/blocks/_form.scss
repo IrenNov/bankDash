@@ -18,6 +18,11 @@
     }
 
     .group {
+            width: 100%; 
+            max-width: 418px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         &__label {
             @include fluid-text (16, 13);
             color: var(--color-dark);
@@ -29,11 +34,13 @@
             background-color: transparent;
             color: var(--color-text-input);
             padding: 14px 20px;
+            text-overflow: ellipsis;
 
             &::placeholder {
                 color: inherit;
                 font-family: var(--font-family-regular);
                 @include fluid-text(15, 13);
+                text-overflow: ellipsis;
             }
         }
     }

@@ -452,10 +452,11 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2.08vw;
 }
 .header__menu {
   display: flex;
-  gap: 30px;
+  gap: min(2.08vw, 30px);
   justify-content: end;
   align-items: center;
 }
@@ -526,7 +527,7 @@ hr {
 .avatar-form {
   position: relative;
   display: inline-block;
-  width: 130px;
+  width: min(9.03vw, 130px);
 }
 .avatar-form__input {
   display: none;
@@ -554,8 +555,14 @@ hr {
   transform: scale(1.2);
 }
 
+.search {
+  width: 17.7vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .search__input {
-  width: 255px;
+  width: 17.7vw;
   height: var(--input-height);
   border-radius: 50rem;
   border: none;
@@ -568,16 +575,19 @@ hr {
   padding-left: 60px;
   padding-right: 10px;
   color: var(--color-gray-alt);
+  text-overflow: ellipsis;
 }
 .search__input::-moz-placeholder {
   color: inherit;
   font-family: var(--font-family-regular);
   font-size: clamp(13px, 1.0416666667vw, 15px);
+  text-overflow: ellipsis;
 }
 .search__input::placeholder {
   color: inherit;
   font-family: var(--font-family-regular);
   font-size: clamp(13px, 1.0416666667vw, 15px);
+  text-overflow: ellipsis;
 }
 .search__input:focus {
   transform: scale(1.1);
@@ -638,8 +648,8 @@ hr {
 }
 .setting-card__form {
   display: flex;
-  padding-top: 52px;
-  gap: 53px;
+  padding-top: 3.61vw;
+  gap: 3.68vw;
 }
 .setting-card__form > :first-child {
   flex: 0 0 auto;
@@ -665,6 +675,13 @@ hr {
   flex-direction: column;
   gap: 10px;
 }
+.form .group {
+  width: 100%;
+  max-width: 418px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .form .group__label {
   font-size: clamp(13px, 1.1111111111vw, 16px);
   color: var(--color-dark);
@@ -675,14 +692,17 @@ hr {
   background-color: transparent;
   color: var(--color-text-input);
   padding: 14px 20px;
+  text-overflow: ellipsis;
 }
 .form .group__input::-moz-placeholder {
   color: inherit;
   font-family: var(--font-family-regular);
   font-size: clamp(13px, 1.0416666667vw, 15px);
+  text-overflow: ellipsis;
 }
 .form .group__input::placeholder {
   color: inherit;
   font-family: var(--font-family-regular);
   font-size: clamp(13px, 1.0416666667vw, 15px);
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=style.css.map */

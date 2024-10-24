@@ -17,11 +17,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 2.08vw;
     }
 
     &__menu {
         display: flex;
-        gap: 30px;
+        gap: min(2.08vw, 30px);
         justify-content: end;
         align-items: center;
     }
