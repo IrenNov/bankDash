@@ -1,0 +1,17 @@
+.card {
+    overflow-y: auto;
+
+    &__container {
+        height: calc(100vh - 130px);
+    }
+
+    &__wrapper {
+        background-color: var(--color-white);
+        margin: 30px 40px;
+        border-radius: var(--border-radius-large);
+        padding: 37px 30px 30px;
+        overflow: hidden;
+    }
+
+
+}

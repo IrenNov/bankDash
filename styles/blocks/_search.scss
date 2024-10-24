@@ -1,0 +1,29 @@
+.search {
+
+    &__input {
+
+        width: 255px;
+        height: var(--input-height);
+        border-radius: 50rem;
+        border: none;
+        background-color: var(--color-fon);
+        transition: transform 0.3s ease;
+
+        background-image: url(../image/search-icon.svg);
+        background-repeat: no-repeat;
+        background-position-x: 25px;
+        background-position-y: 15px;
+        padding-left: 60px;
+        padding-right: 10px;
+        color: var(--color-gray-alt);
+        &::placeholder {
+            color: inherit;
+            font-family: var(--font-family-regular);
+            @include fluid-text(15, 13);
+        }
+        &:focus {
+           transform: scale(1.1);
+        } 
+    }
+   
+}

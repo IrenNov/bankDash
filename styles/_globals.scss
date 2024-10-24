@@ -1,0 +1,58 @@
+body {
+  @include fluid-text(15, 12);
+
+  font-family: var(--font-family-regular);
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-text-input);
+  background-color: var(--color-fon);
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  overflow: hidden;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+  outline: none;
+  border: none;
+}
+
+button:focus, input:focus {
+    outline: none;
+  }
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+
+
+h1, .h1 {
+  @include fluid-text(60, 43);
+}
+
+h2, .h2 {
+  @include fluid-text(28, 20);
+  font-family: var(--font-family-semibold);
+  font-weight: 600;
+  color: var(--color-dark-alt);
+}
+
+h3, .h3 {
+  @include fluid-text(18, 15);
+}
+
+h4, .h4 {
+  @include fluid-text(16, 13);
+}
+hr {
+  height: 1px; 
+  background-color:var(--color-light); 
+  border: none;
+  margin-bottom: 0;
+}

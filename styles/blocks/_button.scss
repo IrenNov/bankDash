@@ -1,0 +1,38 @@
+.button {
+  border: none;
+  border-radius: 50rem;
+  @include flex-center;
+
+  height: var(--button-height);
+  aspect-ratio: 1;
+  font-size: 20px;
+  color: var(--color-light);
+  background-color: var(--color-fon);
+
+
+  @include hover {
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+  }
+
+  &--transparent {
+    color: var(--color-dark);
+    background-color: transparent;
+  }
+
+  &--accent {
+    background-color: var(--color-accent);
+    min-width: 190px;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    @include fluid-text (18, 15);
+    font-family: var(--font-family-medium);
+    margin-top: 30px;
+    align-self: end;
+    padding-block: clamp(14px, 0.97vw, 11px);
+
+    @include hover {
+      transform: scale(1.2);
+    }
+  }
+}

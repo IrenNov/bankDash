@@ -1,0 +1,19 @@
+@import 'normalize',
+'fonts',
+'mixins',
+'media',
+'variables',
+'utils',
+'globals';
+
+@import 'blocks/button',
+'blocks/grid',
+'blocks/burger-button',
+'blocks/header',
+'blocks/main',
+'blocks/aside',
+'blocks/avatar-form',
+'blocks/search',
+'blocks/card',
+'blocks/setting-card',
+'blocks/form';

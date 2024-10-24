@@ -1,0 +1,35 @@
+.avatar-form {
+
+    position: relative;
+    display: inline-block;
+    width: 130px;
+
+    &__input {
+        display: none;
+    }
+
+
+    .avatar-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__button {
+        border: none;
+        position: absolute;
+        top: 84px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    &__button:hover {
+        transform: scale(1.2);
+    }
+}

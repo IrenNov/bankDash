@@ -1,0 +1,29 @@
+.header {
+    
+    padding-block: 20px 20px;
+    background-color: var(--color-white);
+    margin-left:  max(17.36vw, 250px);
+    border-bottom: 1px solid #E6EFF5;
+
+    .header-avatar-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 5px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 30px;
+        justify-content: end;
+        align-items: center;
+    }
+
+}
