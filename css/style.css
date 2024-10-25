@@ -183,15 +183,15 @@ svg * {
   --color-gray: #B1B1B1;
   --color-gray-alt: #8BA3CB;
   --border: 1px solid var(--color-light-alt);
-  --border-radius: 15px;
-  --border-radius-large: 25px;
+  --border-radius: 1.04vw;
+  --border-radius-large: 1.74vw;
   --font-family-regular: "Inter Regular", sans-serif;
   --font-family-medium: "Inter Medium", sans-serif;
   --font-family-semibold: "Inter SemiBold", sans-serif;
   --container-width: 1440px;
   --container-padding-x: 40px;
-  --input-height: 50px;
-  --button-height: 50px;
+  --input-height: max(40px, 4.88vh);
+  --button-height: max(40px, 4.88vh);
   --transition-duration: 0.2s;
 }
 @media (max-width: 767px) {
@@ -292,6 +292,30 @@ hr {
   margin-bottom: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0.42vw; /* Ширина вертикальной полосы */
+  height: 0.42vw; /* Высота горизонтальной полосы */
+}
+
+/* Стили для "трека" — фона полосы прокрутки */
+::-webkit-scrollbar-track {
+  background-color: var(--color-light-alt); /* Цвет фона трека */
+  border-radius: 0.42vw 0 0 0.42vw;
+  margin-block: 1.74vw; /* Скругленные края трека */
+}
+
+/* Стили для бегунка */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-alt); /* Цвет бегунка */
+  border-radius: 0.42vw 0 0 0.42vw; /* Скругленные края бегунка */
+  border: none; /* Цвет обводки бегунка */
+}
+
+/* При наведении на бегунок */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-gray-alt); /* Темнее при наведении */
+}
+
 .button {
   border: none;
   border-radius: 50rem;
@@ -322,12 +346,12 @@ hr {
 }
 .button--accent {
   background-color: var(--color-accent);
-  min-width: 190px;
+  min-width: 13.19vw;
   border-radius: var(--border-radius);
   color: var(--color-white);
   font-size: clamp(15px, 1.25vw, 18px);
   font-family: var(--font-family-medium);
-  margin-top: 30px;
+  margin-top: 2.93vh;
   align-self: end;
   padding-block: clamp(14px, 0.97vw, 11px);
 }
@@ -391,7 +415,7 @@ hr {
     --gridColumns: 1;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1439px) {
   .grid--3 {
     --gridColumns: 2;
   }
@@ -440,8 +464,8 @@ hr {
   border-bottom: 1px solid #E6EFF5;
 }
 .header .header-avatar-image {
-  width: 60px;
-  height: 60px;
+  width: max(40px, 5.86vh);
+  aspect-ratio: 1;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -478,15 +502,15 @@ hr {
 }
 .aside__logo {
   max-height: 100px;
-  padding-block: 32px 2.22vw;
+  padding-block: 3.125vh;
   padding-inline: 3.06vw 1.53vw;
 }
 .aside__list {
   overflow-y: auto;
-  padding-block: 2.08vw 24.79vw;
+  padding-block: 3.03vh;
 }
 .aside__item:not(:last-child) {
-  padding-bottom: 39px;
+  padding-bottom: 3.8vh;
 }
 .aside__link {
   font-size: clamp(15px, 1.25vw, 18px);
@@ -537,7 +561,7 @@ hr {
 }
 .avatar-form .avatar-image {
   width: 130px;
-  height: 130px;
+  aspect-ratio: 1;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -545,7 +569,7 @@ hr {
 .avatar-form__button {
   border: none;
   position: absolute;
-  top: 84px;
+  top: 5.83vw;
   right: 0;
   width: 30px;
   height: 30px;
@@ -577,7 +601,7 @@ hr {
   background-image: url(../image/search-icon.svg);
   background-repeat: no-repeat;
   background-position-x: 25px;
-  background-position-y: 15px;
+  background-position-y: 50%;
   padding-left: 60px;
   padding-right: 10px;
   color: var(--color-gray-alt);
@@ -599,18 +623,18 @@ hr {
   transform: scale(1.1);
 }
 
-.card {
-  overflow-y: auto;
-}
-.card__container {
-  height: calc(100vh - 130px);
-}
 .card__wrapper {
+  height: 77.46vh;
+  overflow: auto;
   background-color: var(--color-white);
-  margin: 30px 40px;
+  margin: 2.93vh 2.78vw;
   border-radius: var(--border-radius-large);
-  padding: 37px 30px 30px;
-  overflow: hidden;
+  padding: 3.61vh 30px 2.93vh;
+}
+@media (min-width: 1440px) {
+  .card__wrapper {
+    height: min(77.46vh, 49.79vw);
+  }
 }
 
 .setting-card__header {
@@ -654,7 +678,7 @@ hr {
 }
 .setting-card__form {
   display: flex;
-  padding-top: 3.61vw;
+  padding-top: 5.08vh;
   gap: 3.68vw;
 }
 .setting-card__form > :first-child {
@@ -672,18 +696,18 @@ hr {
 .form__body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 22px;
+  row-gap: 1.53vw;
   -moz-column-gap: 29px;
        column-gap: 29px;
 }
 .form__group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.98vh;
 }
 .form .group {
   width: 100%;
-  max-width: 418px;
+  max-width: 29.03vw;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -697,8 +721,9 @@ hr {
   border-radius: var(--border-radius);
   background-color: transparent;
   color: var(--color-text-input);
-  padding: 14px 20px;
+  padding: 0.97vw 20px;
   text-overflow: ellipsis;
+  font-size: clamp(13px, 1.0416666667vw, 15px);
 }
 .form .group__input::-moz-placeholder {
   color: inherit;

@@ -1,0 +1,23 @@
+::-webkit-scrollbar {
+    width: 0.42vw;              /* Ширина вертикальной полосы */
+    height: 0.42vw;             /* Высота горизонтальной полосы */
+}
+
+/* Стили для "трека" — фона полосы прокрутки */
+::-webkit-scrollbar-track {
+    background-color: var(--color-light-alt); /* Цвет фона трека */
+    border-radius: 0.42vw 0 0 0.42vw;
+    margin-block: 1.74vw;       /* Скругленные края трека */
+}
+
+/* Стили для бегунка */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray-alt);    /* Цвет бегунка */
+    border-radius: 0.42vw 0 0 0.42vw;       /* Скругленные края бегунка */
+    border: none; /* Цвет обводки бегунка */
+}
+
+/* При наведении на бегунок */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-gray-alt);    /* Темнее при наведении */
+}

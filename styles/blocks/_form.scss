@@ -6,20 +6,20 @@
     &__body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 22px;
+        row-gap: 1.53vw;
         column-gap: 29px;
     }
 
     &__group {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0.98vh;
 
     }
 
     .group {
             width: 100%; 
-            max-width: 418px;
+            max-width: 29.03vw;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -33,8 +33,9 @@
             border-radius: var(--border-radius);
             background-color: transparent;
             color: var(--color-text-input);
-            padding: 14px 20px;
+            padding: 0.97vw 20px;
             text-overflow: ellipsis;
+            @include fluid-text(15, 13);
 
             &::placeholder {
                 color: inherit;

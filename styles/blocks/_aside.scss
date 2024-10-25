@@ -9,7 +9,7 @@
 
     &__logo {
         max-height: 100px;
-        padding-block: 32px 2.22vw;
+        padding-block: 3.125vh;
         padding-inline: 3.06vw 1.53vw;
     }
 
@@ -18,11 +18,11 @@
     //gap: 30px;
     &__list {
         overflow-y: auto;
-        padding-block: 2.08vw 24.79vw;
+        padding-block: 3.03vh;
     }
     &__item:not(:last-child) {
 
-        padding-bottom: 39px;
+        padding-bottom: 3.8vh;
     }
 
     &__link {

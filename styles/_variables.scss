@@ -11,8 +11,8 @@
   --color-gray-alt: #8BA3CB;
 
   --border: 1px solid var(--color-light-alt);
-  --border-radius: 15px;
-  --border-radius-large: 25px;
+  --border-radius: 1.04vw;
+  --border-radius-large: 1.74vw;
 
 
   --font-family-regular: 'Inter Regular', sans-serif;
@@ -23,8 +23,8 @@
   --container-padding-x: 40px;
 
 
-  --input-height: 50px;
-  --button-height: 50px;
+  --input-height: max(40px, 4.88vh);
+  --button-height: max(40px, 4.88vh);
 
   --transition-duration: 0.2s;
 

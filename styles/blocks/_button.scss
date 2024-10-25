@@ -22,12 +22,12 @@
 
   &--accent {
     background-color: var(--color-accent);
-    min-width: 190px;
+    min-width: 13.19vw;
     border-radius: var(--border-radius);
     color: var(--color-white);
     @include fluid-text (18, 15);
     font-family: var(--font-family-medium);
-    margin-top: 30px;
+    margin-top: 2.93vh;
     align-self: end;
     padding-block: clamp(14px, 0.97vw, 11px);
 

@@ -5,8 +5,8 @@
     border-bottom: 1px solid #E6EFF5;
 
     .header-avatar-image {
-        width: 60px;
-        height: 60px;
+        width: max(40px, 5.86vh);
+        aspect-ratio: 1;
         border-radius: 50%;
         object-fit: cover;
         margin-left: 5px;

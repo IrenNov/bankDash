@@ -1,16 +1,20 @@
 .card {
-    overflow-y: auto;
+    
 
     &__container {
-        height: calc(100vh - 130px);
+         
     }
 
     &__wrapper {
+        height: calc(100vh - 22.54vh);
+        overflow: auto;
         background-color: var(--color-white);
-        margin: 30px 40px;
+        margin: 2.93vh 2.78vw;
         border-radius: var(--border-radius-large);
-        padding: 37px 30px 30px;
-        overflow: hidden;
+        padding: 3.61vh 30px 2.93vh;
+        @include desktop-above {
+            height: min(calc(100vh - 22.54vh), 49.79vw);
+        }
     }
 
 
