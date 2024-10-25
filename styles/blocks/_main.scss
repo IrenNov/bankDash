@@ -2,5 +2,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto 1fr;
-    
+    @include mobile {
+        grid-template-columns: auto;
+    }
 }

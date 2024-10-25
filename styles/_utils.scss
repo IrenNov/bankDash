@@ -1,9 +1,9 @@
-.container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-  padding-inline: var(--container-padding-x);
-  display: flex;
-  justify-content: end;
-}
+// .container {
+//   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+//   padding-inline: var(--container-padding-x);
+//   display: flex;
+//   justify-content: end;
+// }
 
 .visually-hidden {
   @include visually-hidden;

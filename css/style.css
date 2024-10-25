@@ -201,13 +201,6 @@ svg * {
   }
 }
 
-.container {
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-  padding-inline: var(--container-padding-x);
-  display: flex;
-  justify-content: end;
-}
-
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -459,6 +452,7 @@ hr {
 }
 
 .header {
+  padding-inline: var(--container-padding-x);
   padding-block: 1.39vw;
   background-color: var(--color-white);
   border-bottom: 1px solid #E6EFF5;
@@ -488,6 +482,11 @@ hr {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
+}
+@media (max-width: 767px) {
+  .main {
+    grid-template-columns: auto;
+  }
 }
 
 .aside {
