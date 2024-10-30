@@ -1,5 +1,5 @@
 .search {
-    
+    margin-left: auto;
     width: 17.7vw;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -36,6 +36,12 @@
         &:focus {
             transform: scale(1.1);
             
+        }
+        @include mobile {
+            width: 100%;
+            background-size: 16px;
+            padding-left: 45px;
+            background-position-x: 19px;
         }
     }
 

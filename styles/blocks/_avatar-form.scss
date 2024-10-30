@@ -15,6 +15,9 @@
         aspect-ratio: 1;
         border-radius: 50%;
         object-fit: cover;
+         @include mobile {
+        width: 170px;
+    }
     }
 
     &__button {
@@ -23,14 +26,28 @@
         top: 5.83vw;
         right: 0;
         width: 30px;
-        height: 30px;
+        aspect-ratio: 1;
         border-radius: 50%;
         background-color: var(--color-accent);
         cursor: pointer;
         transition: transform 0.3s ease;
+        & > img {
+            margin: auto;
+        }
+        @include mobile {
+            width: 39px;
+            top: 111px;
+            & > img {
+                width: 18.5px;
+                aspect-ratio: 1;
+            }
+        }
     }
 
     &__button:hover {
         transform: scale(1.2);
+    }
+    @include mobile {
+        width: 170px;
     }
 }

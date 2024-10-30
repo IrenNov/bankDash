@@ -7,19 +7,24 @@
     height: 100vh;
     overflow-y: auto;
 
+    //scrollbar-width: thin;
+    //scrollbar-color: var(--color-gray-alt) var(--color-light-alt);
+
     &__logo {
         max-height: 100px;
-        padding-block: 3.125vh;
+        padding-block: min(3.125vh, 2.15vw);
         padding-inline: 3.06vw 1.53vw;
     }
 
     display: flex;
     flex-direction: column;
+
     //gap: 30px;
     &__list {
         overflow-y: auto;
         padding-block: 3.03vh;
     }
+
     &__item:not(:last-child) {
 
         padding-bottom: 3.8vh;
@@ -68,5 +73,29 @@
         }
 
 
+    }
+
+    .active {
+        display: block;
+    }
+
+    @include mobile {
+        width: 80vw;
+        padding-block: 5.45vw;
+        padding-inline: 4.06vw 1.53vw;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: transform 1s ease-in-out;
+        &__list {
+        padding-top: 5.03vh;
+        }
+        &__item:not(:last-child) {
+
+            padding-bottom: 4.8vh;
+        }
+        &__link { 
+            font-size: 18px;
+            padding-left: 4.06vw;
+        }
     }
 }

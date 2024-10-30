@@ -3,6 +3,10 @@
     padding-block: 1.39vw;
     background-color: var(--color-white);
     border-bottom: 1px solid #E6EFF5;
+    @include mobile {
+        padding-inline: 25px 26px;
+        padding-block: 25px 20px;
+    }
 
     .header-avatar-image {
         width: max(40px, 5.86vh);
@@ -10,20 +14,40 @@
         border-radius: 50%;
         object-fit: cover;
         margin-left: 5px;
+        @include mobile {
+            width: 35px;
+            margin-left: 0;
+        }
     }
 
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 2.08vw;
-    }
-
-    &__menu {
-        display: flex;
         gap: min(2.08vw, 30px);
-        justify-content: end;
         align-items: center;
+        @include mobile {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+    &__burger-button {
+        padding: 0;
     }
 
+    @include mobile {
+        &__burger-button {
+            order: 1;
+        }
+        &__title {
+            order: 2;
+        }
+        &__avatar {
+            order: 3;
+        }
+        &__search-form {
+            order: 4;
+            margin-inline: auto;
+            flex: 1 0 100%;
+        } 
+    }
 }
