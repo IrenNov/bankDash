@@ -309,53 +309,53 @@
                                 <div class="form__body">
                                     <div class="form__group group">
                                         <label class="group__label" for="name">Your Name</label>
-                                        <input class="group__input" type="text" id="name" name="name"
-                                            placeholder="Charlene Reed" required>
+                                        <input class="group__input" type="text" id="name" value="Charlene Reed" name="name"
+                                            placeholder="Charlene Reed" pattern="[A-Za-z\s]*" required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="username">User Name</label>
-                                        <input class="group__input" id="username" name="username"
-                                            placeholder="Charlene Reed " required>
+                                        <input class="group__input" type="text" id="username" value="Charlene Reed" name="username"
+                                            placeholder="Charlene Reed " pattern="[A-Za-z\s]*" required>
                                     </div>
                                     <div class="form__group group">
                                         <label class="group__label" for="email">Email</label>
                                         <input class="group__input" type="email" id="email" name="email"
-                                            placeholder="charlenereed@gmail.com" required>
+                                            placeholder="charlenereed@gmail.com"  required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="password">Password</label>
-                                        <input class="group__input" id="password" name="password"
+                                        <input class="group__input" type="password" id="password" name="password"
                                             placeholder="**********" required>
                                     </div>
                                     <div class="form__group group">
                                         <label class="group__label" for="dateofbirth">Date of Birth</label>
-                                        <input class="group__input" id="dateofbirth" name="dateofbirth"
+                                        <input class="group__input" type="date" id="dateofbirth" name="dateofbirth"
                                             placeholder="25 January 1990" required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="presentaddress">Present Address</label>
                                         <input class="group__input" id="presentaddress" name="presentaddress"
-                                            placeholder="San Jose, California, USA" required>
+                                            placeholder="San Jose, California, USA" value="San Jose, California, USA" pattern="^[A-Z][a-zA-Z\s]+,\s[A-Z][a-zA-Z\s]+,\s[A-Z][a-zA-Z\s]+$"  required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="permanentaddress">Permanent Address</label>
                                         <input class="group__input" id="permanentaddress" name="permanentaddress"
-                                            placeholder="San Jose, California, USA" required>
+                                            placeholder="San Jose, California, USA" value="San Jose, California, USA" pattern="^[A-Z][a-zA-Z\s]+,\s[A-Z][a-zA-Z\s]+,\s[A-Z][a-zA-Z\s]+$"  required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="city">City</label>
-                                        <input class="group__input" id="city" name="city" placeholder="San Jose"
+                                        <input class="group__input" type="text" id="city" name="city" placeholder="San Jose" pattern="[A-Za-z\s]*"
                                             required>
                                     </div>
                                     <div class="form__group  group">
                                         <label class="group__label" for="postalcode">Postal Code</label>
-                                        <input class="group__input" id="postalcode" name="postalcode"
+                                        <input class="group__input" type="number" id="postalcode" name="postalcode"
                                             placeholder="45962" required>
                                     </div>
 
                                     <div class="form__group  group">
                                         <label class="group__label" for="country">Country</label>
-                                        <input class="group__input" id="country" name="country" placeholder="USA"
+                                        <input class="group__input" type="text" id="country" name="country" placeholder="USA" pattern="[A-Za-z\s]*"
                                             required>
                                     </div>
                                 </div>
@@ -672,6 +672,7 @@
     <script src="./scripts/mobile-overlay.js" defer></script>
     <script src="./scripts/aside__list.js" defer></script>
     <script src="./scripts/setting-card__list.js" defer></script>
+    <script src="./scripts/placeholder.js"></script>
 
 </body>
 
